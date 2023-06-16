@@ -1,0 +1,16 @@
+[package]
+name = "enum_helpers"
+description = "Adds functions like is_, as_ and as_mut_ to enums"
+repository = "https://github.com/crwn1337/enum_helpers"
+license = "MIT"
+version = "0.0.1"
+edition = "2021"
+authors = ["crwn1337"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "2.0.16", features = ["full"] }
+quote = "1.0.27"
+convert_case = "0.6.0"
