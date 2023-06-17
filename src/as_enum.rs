@@ -38,7 +38,7 @@ pub(crate) fn impl_enum_as(ast: &ItemEnum) -> TokenStream {
                     #[must_use]
                     pub fn #function_name(&self) -> Option<(#( &#field_types ),*)> {
                         match self {
-                            Self::#variant_ident(#( #fields ),*) => Some((#( &#fields ),*)),
+                            Self::#variant_ident(#( ref #fields ),*) => Some((#( #fields ),*)),
                             _ => None
                         }
                     }
@@ -53,7 +53,7 @@ pub(crate) fn impl_enum_as(ast: &ItemEnum) -> TokenStream {
                     #[must_use]
                     pub fn #function_name(&self) -> Option<(#( &#field_types ),*)> {
                         match self {
-                            Self::#variant_ident{#( #fields ),*} => Some((#( &#fields ),*)),
+                            Self::#variant_ident{#( ref #fields ),*} => Some((#( #fields ),*)),
                             _ => None
                         }
                     }
