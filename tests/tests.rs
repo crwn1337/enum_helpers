@@ -17,6 +17,13 @@ pub enum Test {
     Struct(SmallStruct),
 }
 
+#[allow(dead_code)]
+#[derive(EnumIs, EnumAs, EnumAsMut)]
+pub enum Generic<T> {
+    None,
+    Unnamed(T),
+}
+
 #[test]
 fn test() {
     is_tests();

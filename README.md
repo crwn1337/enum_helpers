@@ -16,4 +16,6 @@ pub fn main() {
 }
 ```
 
-More examples at [tests](tests/tests.rs).
+[More examples here](tests/tests.rs).
+
+[Changelog here](CHANGELOG.md).

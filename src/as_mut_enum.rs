@@ -5,6 +5,7 @@ use syn::{Fields, Ident, ItemEnum};
 
 pub(crate) fn impl_enum_mut_as(ast: &ItemEnum) -> TokenStream {
     let enum_name = &ast.ident;
+    let generics = &ast.generics;
     let variants = &ast.variants;
 
     let enum_methods = variants.iter().map(|v| {
@@ -63,7 +64,7 @@ pub(crate) fn impl_enum_mut_as(ast: &ItemEnum) -> TokenStream {
     });
 
     quote! {
-        impl #enum_name {
+        impl #generics #enum_name #generics {
             #(#enum_methods)*
         }
     }
