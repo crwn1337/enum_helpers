@@ -1,5 +1,5 @@
 # enum_helpers
-A simple rust library that adds functions such as `is_`, `as_` and `as_mut_` to enums.
+A simple rust library that adds functions such as `is_`, `as_`, `as_mut_` and `into_` to enums.
 
 ## Example
 ```rust
@@ -16,6 +16,6 @@ pub fn main() {
 }
 ```
 
-[More examples here](tests/tests.rs).
+[More examples](tests/).
 
-[Changelog here](CHANGELOG.md).
+[Changelog](CHANGELOG.md).

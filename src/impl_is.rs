@@ -3,7 +3,7 @@ use proc_macro::{Span, TokenStream};
 use quote::quote;
 use syn::{Fields, Ident, ItemEnum};
 
-pub(crate) fn impl_enum_is(ast: &ItemEnum) -> TokenStream {
+pub(crate) fn impl_is(ast: &ItemEnum) -> TokenStream {
     let enum_name = &ast.ident;
     let generics = &ast.generics;
     let variants = &ast.variants;

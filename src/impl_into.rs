@@ -3,7 +3,7 @@ use proc_macro::{Span, TokenStream};
 use quote::quote;
 use syn::{Fields, Ident, ItemEnum};
 
-pub(crate) fn impl_enum_as(ast: &ItemEnum) -> TokenStream {
+pub(crate) fn impl_into(ast: &ItemEnum) -> TokenStream {
     let enum_name = &ast.ident;
     let generics = &ast.generics;
     let variants = &ast.variants;
@@ -19,7 +19,7 @@ pub(crate) fn impl_enum_as(ast: &ItemEnum) -> TokenStream {
             .collect::<Vec<_>>();
 
         let function_name = Ident::new(
-            &format!("as_{}", variant_ident).to_case(Case::Snake),
+            &format!("into_{}", variant_ident).to_case(Case::Snake),
             Span::call_site().into(),
         );
 
@@ -37,9 +37,9 @@ pub(crate) fn impl_enum_as(ast: &ItemEnum) -> TokenStream {
                 Some(quote! {
                     #[allow(dead_code)]
                     #[must_use]
-                    pub fn #function_name(&self) -> Option<(#( &#field_types ),*)> {
+                    pub fn #function_name(self) -> Option<(#( #field_types ),*)> {
                         match self {
-                            Self::#variant_ident(#( ref #fields ),*) => Some((#( #fields ),*)),
+                            Self::#variant_ident(#( #fields ),*) => Some((#( #fields ),*)),
                             _ => None
                         }
                     }
@@ -52,9 +52,9 @@ pub(crate) fn impl_enum_as(ast: &ItemEnum) -> TokenStream {
                 Some(quote! {
                     #[allow(dead_code)]
                     #[must_use]
-                    pub fn #function_name(&self) -> Option<(#( &#field_types ),*)> {
+                    pub fn #function_name(self) -> Option<(#( #field_types ),*)> {
                         match self {
-                            Self::#variant_ident{#( ref #fields ),*} => Some((#( #fields ),*)),
+                            Self::#variant_ident{#( #fields ),*} => Some((#( #fields ),*)),
                             _ => None
                         }
                     }

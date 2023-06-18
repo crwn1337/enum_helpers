@@ -1,3 +1,6 @@
+# 0.0.3
+ * support for `into_` (consumes self)
+
 # 0.0.2
  * support for generics
  * more consistent macro generation for `as_`
