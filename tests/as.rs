@@ -2,8 +2,8 @@ use enum_helpers::{EnumAs, EnumAsMut};
 
 #[derive(EnumAs)]
 pub enum AsTest {
-    A(u32), // Unnamed
-    B { a: u32 }, // Named
+    A(u32),               // Unnamed
+    B { a: u32 },         // Named
     C { a: u32, b: u32 }, // Multiple
 }
 
@@ -21,8 +21,8 @@ fn test_as() {
 
 #[derive(EnumAsMut)]
 pub enum AsMutTest {
-    A(u32), // Unnamed
-    B { a: u32 }, // Named
+    A(u32),               // Unnamed
+    B { a: u32 },         // Named
     C { a: u32, b: u32 }, // Multiple
 }
 
