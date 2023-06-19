@@ -1,5 +1,5 @@
 # enum_helpers
-[![github](https://img.shields.io/badge/enum__helpers-github?style=flat-square&logo=github&label=github&labelColor=232323&color=333333)](https://github.com/crwn1337/enum_helpers)
+[![github](https://img.shields.io/badge/enum__helpers-github?style=flat-square&logo=github&label=github.com&labelColor=232323&color=333333)](https://github.com/crwn1337/enum_helpers)
 [![crates.io](https://img.shields.io/crates/v/enum_helpers?style=flat-square&logo=rust&labelColor=232323&color=333333)](https://crates.io/crates/enum_helpers)
 [![docs.rs](https://img.shields.io/badge/enum__helpers-docs?style=flat-square&logo=docs.rs&label=docs.rs&labelColor=232323&color=333333)](https://docs.rs/enum_helpers/)
 

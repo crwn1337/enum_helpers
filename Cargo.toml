@@ -3,7 +3,7 @@ name = "enum_helpers"
 description = "Adds functions like is_, as_, as_mut_ and into_ to enums"
 repository = "https://github.com/crwn1337/enum_helpers"
 license = "MIT"
-version = "0.0.3"
+version = "0.0.4"
 edition = "2021"
 authors = ["crwn1337"]
 

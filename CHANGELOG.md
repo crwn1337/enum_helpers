@@ -1,3 +1,6 @@
+# 0.0.4
+ * add documentation
+
 # 0.0.3
  * support for `into_` (consumes self)
 
