@@ -1,7 +1,12 @@
 # enum_helpers
-A simple rust library that adds functions such as `is_`, `as_`, `as_mut_` and `into_` to enums.
+[![Crates.io](https://img.shields.io/crates/v/enum_helpers?style=flat-square&logo=rust)](https://crates.io/crates/enum_helpers)
+[![Static Badge](https://img.shields.io/badge/enum__helpers-github?style=flat-square&logo=github&labelColor=232323&color=333333)](https://github.com/crwn1337/enum_helpers)
 
-## Example
+A Rust library to add helper functions to enums, with methods such as `is_`, `as_`, `as_mut_`, and `into_`, allowing you to simply your codebase and improve code readability.
+
+## Example Usage
+The following example demonstrates the usage of the `EnumIs` derive macro to utilize a simpler type checking for enums.
+
 ```rust
 use enum_helpers::EnumIs;
 
@@ -16,6 +21,7 @@ pub fn main() {
 }
 ```
 
-[More examples](tests/).
+## Additional Resources
+For more examples, refer to the [tests](tests/) directory.
 
-[Changelog](CHANGELOG.md).
+To keep up with the latest features, improvements, and bug fixes, refer to the [Changelog](CHANGELOG.md) file.
